@@ -1,0 +1,90 @@
+{
+  "status": "success",
+  "filename": "sample_mixed.pdf",
+  "document_type": "pdf",
+  "detected_format": "pdf",
+  "total_pages": 2,
+  "pages": [
+    {
+      "page_number": 1,
+      "method": "native_text",
+      "status": "success",
+      "text": "This first page has selectable text and needs no OCR at all.",
+      "confidence": null,
+      "preprocessing_applied": [],
+      "error": null,
+      "layout": {
+        "paragraphs": [
+          "This first page has selectable text and needs no OCR at all."
+        ],
+        "headings": [],
+        "line_count": 1
+      },
+      "words": []
+    },
+    {
+      "page_number": 2,
+      "method": "ocr",
+      "status": "success",
+      "text": "INVOICE 2026-0042\nCustomer: Acme Corporation\nTotal due: 1250 dollars\n\nThank you for your business",
+      "confidence": 95.71,
+      "preprocessing_applied": [],
+      "error": null,
+      "layout": {
+        "paragraphs": [
+          "INVOICE 2026-0042\nCustomer: Acme Corporation\nTotal due: 1250 dollars",
+          "Thank you for your business"
+        ],
+        "headings": [
+          "INVOICE 2026-0042"
+        ],
+        "line_count": 4
+      },
+      "words": []
+    }
+  ],
+  "full_text": "This first page has selectable text and needs no OCR at all.\n\nINVOICE 2026-0042\nCustomer: Acme Corporation\nTotal due: 1250 dollars\n\nThank you for your business",
+  "metadata": {
+    "processing_time_ms": 355,
+    "ocr_language": "eng",
+    "native_pages": 1,
+    "ocr_pages": 1,
+    "failed_pages": 0,
+    "render_dpi": 300
+  },
+  "tables": [],
+  "structured_data": {
+    "document_type": "invoice",
+    "key_value_pairs": [
+      {
+        "key": "Customer",
+        "value": "Acme Corporation"
+      },
+      {
+        "key": "Total due",
+        "value": "1250 dollars"
+      }
+    ],
+    "emails": [],
+    "phone_numbers": [],
+    "dates": [],
+    "monetary_values": [],
+    "invoice": {
+      "invoice_number": null,
+      "invoice_date": null,
+      "due_date": null,
+      "amounts_found": [],
+      "key_value_pairs": [
+        {
+          "key": "Customer",
+          "value": "Acme Corporation"
+        },
+        {
+          "key": "Total due",
+          "value": "1250 dollars"
+        }
+      ]
+    },
+    "tables": []
+  }
+}
